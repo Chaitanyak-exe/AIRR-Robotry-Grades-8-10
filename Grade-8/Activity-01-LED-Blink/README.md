@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # LED Blink Using Arduino
 
 ## Objective
@@ -11,7 +10,7 @@ To learn how to control an LED using an Arduino Uno and understand the basic con
 
 In this activity, an LED is connected to an Arduino Uno through a resistor. A simple Arduino program is used to turn the LED ON and OFF repeatedly.
 
-This is one of the simplest Arduino activities and helps students understand how a microcontroller can control an electronic component.
+This is a basic Arduino activity that helps students understand how a microcontroller can control an electronic component.
 
 ---
 
@@ -25,15 +24,14 @@ This is one of the simplest Arduino activities and helps students understand how
 - USB cable
 - Laptop
 
-For the complete component details, see [components.md](components.md).
+For more details, see [components.md](components.md).
 
 ---
 
 ## Software Required
 
 - Arduino IDE
-- Arduino Uno board package
-- USB driver, if required by the computer
+- Arduino Uno board support
 
 ---
 
@@ -52,138 +50,84 @@ The longer leg of a standard LED is usually the anode, while the shorter leg is 
 
 ### What is Arduino?
 
-Arduino is a microcontroller-based development platform used to build and control electronic projects.
+Arduino Uno is a microcontroller development board that can be programmed to control electronic components.
 
-The Arduino Uno can read inputs from sensors or switches and control outputs such as LEDs, motors and buzzers.
+It can receive inputs from components such as buttons and sensors and control outputs such as LEDs, motors and buzzers.
 
 ### What is Digital Output?
 
-A digital output has two basic states:
+A digital output can have two basic states:
 
-- HIGH → ON
-- LOW → OFF
+- **HIGH** – ON
+- **LOW** – OFF
 
-In this activity, the Arduino sets a digital pin to HIGH to turn the LED ON and LOW to turn it OFF.
+In this activity, Arduino uses a digital pin to control the LED.
+
+When the pin is HIGH, the LED turns ON.
+
+When the pin is LOW, the LED turns OFF.
 
 ### Why is a Resistor Used?
 
 A resistor is connected in series with the LED to limit the current flowing through it.
 
-Without a suitable current-limiting resistor, too much current could flow through the LED and damage it.
+This helps protect the LED from excessive current.
 
 ### How Does the Activity Work?
 
-The Arduino program first configures the selected digital pin as an output.
+The Arduino program performs the following sequence:
 
-The program then follows these steps:
+1. Set the LED pin as an output.
+2. Set the pin HIGH.
+3. The LED turns ON.
+4. Wait for one second.
+5. Set the pin LOW.
+6. The LED turns OFF.
+7. Wait for one second.
+8. Repeat the process.
 
-1. Set the digital pin HIGH.
-2. The LED turns ON.
-3. Wait for a fixed time.
-4. Set the digital pin LOW.
-5. The LED turns OFF.
-6. Wait again.
-7. Repeat the process continuously.
-
-This produces a blinking LED.
+Because these instructions are inside the `loop()` function, the LED continues blinking.
 
 ---
 
 ## Circuit Diagram
 
 ![LED Blink Circuit](circuit/circuit.png)
-=======
-# LED Blink Using Arduino
-
-## Objective
-
-To learn how to control an LED using an Arduino Uno and understand the basic concept of digital output.
 
 ---
 
-## Description
+## Connections
 
-In this activity, an LED is connected to an Arduino Uno through a resistor. A simple Arduino program is used to turn the LED ON and OFF repeatedly.
+For the circuit used in this activity:
 
-This is one of the simplest Arduino activities and helps students understand how a microcontroller can control an electronic component.
+| Component | Terminal    | Arduino Connection                |
+| --------- | ----------- | --------------------------------- |
+| LED       | Anode (+)   | Arduino D13 through 220Ω resistor |
+| LED       | Cathode (-) | Arduino GND                       |
 
----
-
-## Components Required
-
-- Arduino Uno
-- LED
-- 220Ω resistor
-- Breadboard
-- Jumper wires
-- USB cable
-- Laptop
-
-For the complete component details, see [components.md](components.md).
+For the complete connection details, see [connections.md](connections.md).
 
 ---
 
-## Software Required
+## Procedure
 
-- Arduino IDE
-- Arduino Uno board package
-- USB driver, if required by the computer
-
----
-
-## Theory
-
-### What is an LED?
-
-LED stands for **Light Emitting Diode**. It is an electronic component that produces light when electric current flows through it in the correct direction.
-
-An LED has two terminals:
-
-- **Anode (+)** – positive terminal
-- **Cathode (-)** – negative terminal
-
-The longer leg of a standard LED is usually the anode, while the shorter leg is usually the cathode.
-
-### What is Arduino?
-
-Arduino is a microcontroller-based development platform used to build and control electronic projects.
-
-The Arduino Uno can read inputs from sensors or switches and control outputs such as LEDs, motors and buzzers.
-
-### What is Digital Output?
-
-A digital output has two basic states:
-
-- HIGH → ON
-- LOW → OFF
-
-In this activity, the Arduino sets a digital pin to HIGH to turn the LED ON and LOW to turn it OFF.
-
-### Why is a Resistor Used?
-
-A resistor is connected in series with the LED to limit the current flowing through it.
-
-Without a suitable current-limiting resistor, too much current could flow through the LED and damage it.
-
-### How Does the Activity Work?
-
-The Arduino program first configures the selected digital pin as an output.
-
-The program then follows these steps:
-
-1. Set the digital pin HIGH.
-2. The LED turns ON.
-3. Wait for a fixed time.
-4. Set the digital pin LOW.
-5. The LED turns OFF.
-6. Wait again.
-7. Repeat the process continuously.
-
-This produces a blinking LED.
+1. Collect the Arduino Uno, LED, 220Ω resistor, breadboard and jumper wires.
+2. Place the LED on the breadboard.
+3. Connect the LED anode to one side of the 220Ω resistor.
+4. Connect the other side of the resistor to Arduino digital pin D13.
+5. Connect the LED cathode to Arduino GND.
+6. Connect the Arduino Uno to the laptop using the USB cable.
+7. Open Arduino IDE.
+8. Select the correct Arduino board and port.
+9. Enter the LED Blink program.
+10. Verify and upload the program.
+11. Observe the LED.
+12. The LED should turn ON and OFF repeatedly.
 
 ---
 
-## Circuit Diagram
+## Source Code
 
-![LED Blink Circuit](circuit/circuit.png)
->>>>>>> 0c2e17bd14610450c7840da56ac3e8a337f79324
+The source code is available in:
+
+[`code/main.ino`](code/main.ino)
